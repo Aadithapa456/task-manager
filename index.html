@@ -10,7 +10,7 @@
     <div class="wrapper flex">
       <aside
         id="sidebar"
-        class="flex h-screen w-24 flex-col items-center justify-between bg-gray-900 p-4"
+        class="flex min-h-screen w-24 flex-col items-center justify-between bg-gray-900 p-4"
       >
         <div class="sidebar-title text-2xl font-bold text-purple-400">TM</div>
         <div
@@ -55,7 +55,7 @@
               class="tasks-info flex flex-col items-center gap-4 bg-gray-300 px-4 py-4 md:flex-row"
             >
               <div
-                class="task-info-card-1 00 flex w-2/4 flex-col justify-between rounded-lg bg-white p-4"
+                class="task-info-card-1 00 flex w-full flex-col justify-between rounded-lg bg-white p-4 md:w-2/4"
               >
                 <div
                   class="task-info-title flex items-center justify-between text-xl font-bold text-gray-400"
@@ -68,7 +68,7 @@
                 </div>
               </div>
               <div
-                class="task-info-card-1 00 flex w-2/4 flex-col justify-between rounded-lg bg-white p-4"
+                class="task-info-card-1 00 flex w-full flex-col justify-between rounded-lg bg-white p-4 md:w-2/4"
               >
                 <div
                   class="task-info-title flex items-center justify-between text-xl font-bold text-gray-400"
@@ -81,7 +81,7 @@
                 </div>
               </div>
               <div
-                class="task-info-card-1 00 flex w-2/4 flex-col justify-between rounded-lg bg-white p-4"
+                class="task-info-card-1 00 flex w-full flex-col justify-between rounded-lg bg-white p-4 md:w-2/4"
               >
                 <div
                   class="task-info-title flex items-center justify-between text-xl font-bold text-gray-400"
@@ -96,13 +96,13 @@
             </div>
           </div>
           <div
-            class="dashboard-bottom-content mt-4 flex max-h-96 flex-col rounded-lg bg-white py-10 shadow-md md:flex-row"
+            class="dashboard-bottom-content mt-4 flex max-h-fit flex-col rounded-lg bg-white py-10 shadow-md md:flex-row gap-4"
           >
             <canvas
-              class="left-chart mx-auto my-4 h-96 w-full max-w-lg rounded-lg"
+              class="left-chart mx-auto my-4 !max-h-96 w-full max-w-lg rounded-lg"
             ></canvas>
             <canvas
-              class="right-chart mx-auto my-4 h-96 w-full max-w-lg rounded-lg"
+              class="right-chart mx-auto my-4 !max-h-96 w-full max-w-lg rounded-lg"
             ></canvas>
           </div>
         </div>
