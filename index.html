@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Functional Sidebar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="wrapper flex">
+      <aside
+        id="sidebar"
+        class="flex h-screen w-24 flex-col items-center justify-between bg-gray-900 p-4"
+      >
+        <div class="sidebar-title text-2xl font-bold text-purple-400">TM</div>
+        <div
+          class="sidebar-main-content flex flex-col gap-8 p-2 px-3 text-white"
+        >
+          <button
+            class="rounded-lg p-4 text-lg transition duration-500 hover:bg-gray-800"
+          >
+            <i class="fa-solid fa-list"></i>
+          </button>
+          <button
+            class="rounded-lg p-4 text-lg transition duration-500 hover:bg-gray-800"
+          >
+            <i class="fa-regular fa-circle-check"></i>
+          </button>
+          <button
+            class="rounded-lg p-4 text-lg transition duration-500 hover:bg-gray-800"
+          >
+            <i class="fa-regular fa-circle-check"></i>
+          </button>
+        </div>
+        <div class="sidebar-profile">
+          <img
+            class="h-12 w-12 rounded-full border-2 border-gray-500"
+            src="https://via.placeholder.com/50"
+            alt="Profile"
+          />
+          <p class="mt-2 text-xs text-gray-400">John Doe</p>
+        </div>
+        <script
+          src="https://kit.fontawesome.com/bed699dc9b.js"
+          crossorigin="anonymous"
+        ></script>
+      </aside>
+      <main class="w-full overflow-auto p-2 py-9">
+        <div class="dashboard-wrapper flex h-full flex-col gap-48 p-4">
+          <div
+            class="dashboard-top-content flex flex-col justify-around md:flex-row md:items-center"
+          >
+            <div class="progress-bar">hey</div>
+            <div
+              class="tasks-info flex flex-col items-center gap-4 bg-gray-300 px-4 py-4 md:flex-row"
+            >
+              <div
+                class="task-info-card-1 00 flex w-2/4 flex-col justify-between rounded-lg bg-white p-4"
+              >
+                <div
+                  class="task-info-title flex items-center justify-between text-xl font-bold text-gray-400"
+                >
+                  <p>Total Task</p>
+                  <i class="fa-solid fa-list-check"></i>
+                </div>
+                <div class="task-info-details mb-3 mt-10 text-base">
+                  8 Completed
+                </div>
+              </div>
+              <div
+                class="task-info-card-1 00 flex w-2/4 flex-col justify-between rounded-lg bg-white p-4"
+              >
+                <div
+                  class="task-info-title flex items-center justify-between text-xl font-bold text-gray-400"
+                >
+                  <p>Total Task</p>
+                  <i class="fa-solid fa-list-check"></i>
+                </div>
+                <div class="task-info-details mb-3 mt-10 text-base">
+                  8 Completed
+                </div>
+              </div>
+              <div
+                class="task-info-card-1 00 flex w-2/4 flex-col justify-between rounded-lg bg-white p-4"
+              >
+                <div
+                  class="task-info-title flex items-center justify-between text-xl font-bold text-gray-400"
+                >
+                  <p>Total Task</p>
+                  <i class="fa-solid fa-list-check"></i>
+                </div>
+                <div class="task-info-details mb-3 mt-10 text-base">
+                  8 Completed
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="dashboard-bottom-content mt-4 flex max-h-96 flex-col rounded-lg bg-white py-10 shadow-md md:flex-row"
+          >
+            <canvas
+              class="left-chart mx-auto my-4 h-96 w-full max-w-lg rounded-lg"
+            ></canvas>
+            <canvas
+              class="right-chart mx-auto my-4 h-96 w-full max-w-lg rounded-lg"
+            ></canvas>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      const sidebar = document.getElementById("sidebar");
+      const toggleButton = document.getElementById("toggle-sidebar");
+
+      //   toggleButton.addEventListener("click", () => {
+      //     sidebar.classList.toggle("sidebar-hidden");
+      //   });
+
+      // function showContent(section) {
+      //   const contentMap = {
+      //     dashboard: {
+      //       title: "Dashboard",
+      //       content: "Welcome to the Dashboard page! Here you can find an overview of all your activities."
+      //     },
+      //     tasks: {
+      //       title: "Tasks",
+      //       content: "This is the Tasks section. Track your tasks and mark them as completed."
+      //     },
+      //     notifications: {
+      //       title: "Notifications",
+      //       content: "View your recent notifications and stay up-to-date with updates."
+      //     },
+      //     settings: {
+      //       title: "Settings",
+      //       content: "Manage your preferences and customize your account settings here."
+      //     }
+      //   };
+
+      //   const titleElement = document.getElementById("content-title");
+      //   const contentElement = document.getElementById("content");
+
+      //   titleElement.textContent = contentMap[section].title;
+      //   contentElement.textContent = contentMap[section].content;
+
+      // Close sidebar on mobile after selection
+      if (window.innerWidth < 1024) {
+        sidebar.classList.add("sidebar-hidden");
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="src/script/script.js"></script>
+  </body>
+</html>
